@@ -1,0 +1,176 @@
+.selection-game {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 1.5rem;
+  background-color: white;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+}
+
+.selection-game h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: var(--primary-color);
+}
+
+.game-progress {
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.game-progress span {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.progress-bar {
+  height: 0.5rem;
+  background-color: #e0e0e0;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background-color: var(--accent-color);
+  transition: width 0.3s ease;
+}
+
+.game-instructions {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #333;
+  font-size: 1.1rem;
+}
+
+.sentence-container {
+  margin-bottom: 2rem;
+  background-color: #f8f9fa;
+  padding: 1.5rem;
+  border-radius: var(--border-radius);
+}
+
+.sentence {
+  font-size: 1.3rem;
+  line-height: 2;
+  text-align: center;
+  transition: background-color 0.3s;
+}
+
+.sentence.correct {
+  background-color: rgba(40, 167, 69, 0.1);
+  padding: 1rem;
+  border-radius: var(--border-radius);
+}
+
+.sentence.incorrect {
+  background-color: rgba(220, 53, 69, 0.1);
+  padding: 1rem;
+  border-radius: var(--border-radius);
+}
+
+.word {
+  display: inline-block;
+  margin: 0 0.25rem;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.word:hover:not(.punctuation) {
+  background-color: rgba(76, 134, 168, 0.1);
+}
+
+.word.selected {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.word.is-noun:not(.selected) {
+  background-color: rgba(255, 193, 7, 0.2);
+  position: relative;
+}
+
+.word.is-noun:not(.selected)::after {
+  content: '✓';
+  position: absolute;
+  top: -10px;
+  right: -5px;
+  font-size: 0.8rem;
+  color: var(--success-color);
+}
+
+.word.selected.is-noun {
+  background-color: var(--success-color);
+}
+
+.word.selected:not(.is-noun) {
+  background-color: var(--danger-color);
+}
+
+.word.punctuation {
+  cursor: default;
+  margin: 0;
+  padding: 0;
+}
+
+.feedback {
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+  border-radius: var(--border-radius);
+  text-align: center;
+}
+
+.correct-feedback {
+  background-color: rgba(40, 167, 69, 0.1);
+  color: var(--success-color);
+}
+
+.incorrect-feedback {
+  background-color: rgba(220, 53, 69, 0.1);
+  color: var(--danger-color);
+}
+
+.game-actions {
+  text-align: center;
+}
+
+.check-button {
+  padding: 0.75rem 2rem;
+}
+
+.check-button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.game-completed {
+  text-align: center;
+  padding: 2rem 0;
+}
+
+.game-completed h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: var(--primary-color);
+}
+
+.game-completed p {
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 768px) {
+  .sentence {
+    font-size: 1.1rem;
+    line-height: 1.8;
+  }
+  
+  .word {
+    padding: 0.2rem 0.3rem;
+    margin: 0.1rem;
+  }
+}

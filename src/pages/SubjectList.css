@@ -1,0 +1,109 @@
+.subject-list-page {
+  padding: 1rem 0;
+}
+
+.subject-list-page h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: var(--primary-color);
+}
+
+.page-description {
+  margin-bottom: 2rem;
+  color: #555;
+  max-width: 800px;
+}
+
+.subjects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.subject-card {
+  display: flex;
+  background-color: white;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+  position: relative;
+  text-decoration: none;
+  color: var(--text-color);
+}
+
+.subject-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.subject-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  width: 90px;
+  color: white;
+  align-self: stretch;
+}
+
+.subject-content {
+  flex: 1;
+  padding: 1.5rem;
+}
+
+.subject-content h2 {
+  margin-bottom: 0.5rem;
+  font-size: 1.25rem;
+}
+
+.subject-content p {
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.progress-details {
+  margin-top: 1rem;
+}
+
+.progress-bar {
+  height: 8px;
+  background-color: #f0f0f0;
+  border-radius: 4px;
+  overflow: hidden;
+  margin-bottom: 0.5rem;
+}
+
+.progress-fill {
+  height: 100%;
+  transition: width 0.3s;
+}
+
+.progress-text {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.85rem;
+  color: #666;
+}
+
+.subject-arrow {
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.5rem;
+  opacity: 0.3;
+  transition: opacity 0.2s, transform 0.2s;
+}
+
+.subject-card:hover .subject-arrow {
+  opacity: 0.7;
+  transform: translateY(-50%) translateX(3px);
+}
+
+@media (max-width: 768px) {
+  .subjects-grid {
+    grid-template-columns: 1fr;
+  }
+}

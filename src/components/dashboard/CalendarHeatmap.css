@@ -1,0 +1,132 @@
+.calendar-heatmap {
+  background-color: white;
+  border-radius: var(--border-radius);
+  padding: 1rem;
+}
+
+.calendar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.calendar-header h3 {
+  font-size: 1.2rem;
+  margin: 0;
+  color: var(--primary-color);
+}
+
+.month-nav {
+  background: none;
+  border: none;
+  font-size: 1rem;
+  color: var(--primary-color);
+  cursor: pointer;
+  padding: 0.25rem 0.5rem;
+  border-radius: 50%;
+  transition: background-color 0.2s;
+}
+
+.month-nav:hover {
+  background-color: rgba(76, 134, 168, 0.1);
+}
+
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 0.25rem;
+}
+
+.day-name {
+  text-align: center;
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: #777;
+  padding: 0.25rem;
+}
+
+.day-cell {
+  aspect-ratio: 1;
+  border-radius: 4px;
+  padding: 0.25rem;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f0f0f0;
+}
+
+.day-cell.empty {
+  background-color: transparent;
+}
+
+.day-cell.today {
+  border: 2px solid var(--primary-color);
+}
+
+.day-number {
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.activity-count {
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  font-size: 0.6rem;
+  background-color: var(--primary-color);
+  color: white;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.day-cell.low-activity {
+  background-color: rgba(156, 227, 125, 0.3);
+}
+
+.day-cell.medium-activity {
+  background-color: rgba(156, 227, 125, 0.6);
+}
+
+.day-cell.high-activity {
+  background-color: rgba(156, 227, 125, 0.9);
+}
+
+.activity-legend {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1rem;
+  font-size: 0.75rem;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.legend-color {
+  width: 12px;
+  height: 12px;
+  border-radius: 2px;
+  background-color: #f0f0f0;
+}
+
+.legend-color.low-activity {
+  background-color: rgba(156, 227, 125, 0.3);
+}
+
+.legend-color.medium-activity {
+  background-color: rgba(156, 227, 125, 0.6);
+}
+
+.legend-color.high-activity {
+  background-color: rgba(156, 227, 125, 0.9);
+}

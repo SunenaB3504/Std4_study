@@ -1,0 +1,150 @@
+.quiz-game {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 1.5rem;
+  background-color: white;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+}
+
+.quiz-game h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: var(--primary-color);
+}
+
+.question-progress {
+  text-align: center;
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+  color: #666;
+}
+
+.timer {
+  position: relative;
+  height: 0.5rem;
+  background-color: #e0e0e0;
+  border-radius: 1rem;
+  margin-bottom: 1.5rem;
+  overflow: hidden;
+}
+
+.timer-bar {
+  height: 100%;
+  transition: width 1s linear;
+}
+
+.timer-text {
+  position: absolute;
+  right: 0;
+  top: 0.6rem;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.question {
+  margin-bottom: 2rem;
+}
+
+.question h3 {
+  margin-bottom: 1.5rem;
+  font-size: 1.4rem;
+}
+
+.question-image {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.question-image img {
+  max-width: 100%;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+}
+
+.options-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.option {
+  padding: 1rem;
+  text-align: left;
+  background-color: #f5f7fa;
+  transition: all 0.2s;
+}
+
+.option:hover:not([disabled]) {
+  background-color: #e9ecef;
+  transform: translateY(-2px);
+}
+
+.option.correct {
+  background-color: rgba(40, 167, 69, 0.2);
+  border-color: var(--success-color);
+}
+
+.option.incorrect {
+  background-color: rgba(220, 53, 69, 0.2);
+  border-color: var(--danger-color);
+}
+
+.option:disabled {
+  cursor: default;
+}
+
+.explanation {
+  margin-top: 1.5rem;
+  padding: 1rem;
+  border-radius: var(--border-radius);
+  font-size: 1rem;
+}
+
+.correct-explanation {
+  background-color: rgba(40, 167, 69, 0.1);
+  border-left: 4px solid var(--success-color);
+}
+
+.incorrect-explanation {
+  background-color: rgba(220, 53, 69, 0.1);
+  border-left: 4px solid var(--danger-color);
+}
+
+.quiz-progress {
+  margin-top: 1.5rem;
+}
+
+.progress-bar {
+  height: 0.5rem;
+  background-color: #e0e0e0;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background-color: var(--accent-color);
+  transition: width 0.3s ease;
+}
+
+.game-completed {
+  text-align: center;
+  padding: 2rem 0;
+}
+
+.game-completed h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: var(--primary-color);
+}
+
+.game-completed p {
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 768px) {
+  .option {
+    padding: 0.75rem;
+  }
+}

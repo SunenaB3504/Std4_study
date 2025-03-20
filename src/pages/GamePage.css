@@ -1,0 +1,137 @@
+.game-page {
+  margin-bottom: 2rem;
+}
+
+.game-header {
+  padding: 2rem;
+  margin: -1rem -1rem 2rem -1rem;
+  color: white;
+  border-radius: 0 0 var(--border-radius) var(--border-radius);
+  position: relative;
+}
+
+.back-link {
+  display: inline-block;
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: none;
+  margin-bottom: 1rem;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.back-link:hover {
+  color: white;
+}
+
+.game-container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.no-game {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  padding: 3rem;
+  text-align: center;
+}
+
+.no-game p {
+  margin-bottom: 1.5rem;
+  color: #666;
+  font-size: 1.2rem;
+}
+
+.back-button {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background-color: var(--primary-color);
+  color: white;
+  text-decoration: none;
+  border-radius: var(--border-radius);
+  transition: background-color 0.2s;
+}
+
+.back-button:hover {
+  background-color: #3a6a85;
+}
+
+.game-summary {
+  background-color: white;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  padding: 2rem;
+}
+
+.completion-message {
+  text-align: center;
+}
+
+.completion-message h2 {
+  font-size: 2rem;
+  color: var(--primary-color);
+  margin-bottom: 1.5rem;
+}
+
+.score-display {
+  margin: 2rem 0;
+  padding: 1rem;
+  background-color: #f5f7fa;
+  border-radius: var(--border-radius);
+  display: inline-flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.score-label {
+  font-size: 1.2rem;
+  color: #666;
+}
+
+.score-value {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: var(--secondary-color);
+}
+
+.feedback-message {
+  margin-bottom: 2rem;
+  font-size: 1.2rem;
+  color: #555;
+}
+
+.completion-actions {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.play-again-button {
+  background-color: #6c757d;
+  padding: 0.75rem 1.5rem;
+}
+
+.complete-button {
+  background-color: var(--success-color);
+  padding: 0.75rem 1.5rem;
+}
+
+@media (max-width: 768px) {
+  .game-header {
+    padding: 1.5rem 1rem;
+  }
+  
+  .completion-actions {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+  
+  .completion-actions button {
+    width: 100%;
+  }
+}

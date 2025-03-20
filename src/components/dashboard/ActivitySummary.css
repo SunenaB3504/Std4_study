@@ -1,0 +1,78 @@
+.activity-summary {
+  width: 100%;
+}
+
+.activity-list {
+  list-style: none;
+  padding: 0;
+}
+
+.activity-item {
+  border-bottom: 1px solid #eee;
+}
+
+.activity-item:last-child {
+  border-bottom: none;
+}
+
+.activity-item a {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 0;
+  text-decoration: none;
+  color: var(--text-color);
+  transition: background-color 0.2s;
+}
+
+.activity-item a:hover {
+  background-color: rgba(76, 134, 168, 0.05);
+}
+
+.activity-content {
+  flex: 1;
+}
+
+.activity-title {
+  margin: 0 0 0.25rem 0;
+  font-size: 1rem;
+  color: var(--text-color);
+}
+
+.activity-subject {
+  margin: 0;
+  font-size: 0.85rem;
+  color: #666;
+}
+
+.activity-time {
+  font-size: 0.8rem;
+  color: #999;
+  white-space: nowrap;
+  margin-left: 1rem;
+}
+
+.no-activity {
+  text-align: center;
+  padding: 1.5rem 0;
+  color: #777;
+}
+
+.no-activity p {
+  margin-bottom: 0.5rem;
+}
+
+.explore-button {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  background-color: var(--primary-color);
+  color: white;
+  text-decoration: none;
+  border-radius: var(--border-radius);
+  transition: background-color 0.2s;
+}
+
+.explore-button:hover {
+  background-color: #3a6a85;
+}
