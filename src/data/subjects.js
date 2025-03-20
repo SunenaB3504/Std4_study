@@ -3,7 +3,7 @@ const subjects = [
     id: 'environmental-studies',
     name: 'Environmental Studies',
     icon: '🌳',
-    color: '#4CAF50',
+    color: '#8E24AA', // Purple
     description: 'Learn about plants, animals, and our environment',
     chapters: [
       {
@@ -40,7 +40,7 @@ const subjects = [
     id: 'english',
     name: 'English',
     icon: '📚',
-    color: '#2196F3',
+    color: '#FF6D00', // Orange
     description: 'Improve reading, writing, and vocabulary skills',
     chapters: [
       {
@@ -81,7 +81,7 @@ const subjects = [
     id: 'mathematics',
     name: 'Mathematics',
     icon: '🔢',
-    color: '#F44336',
+    color: '#6A1B9A', // Deep Purple
     description: 'Learn numbers, operations, and basic math concepts',
     chapters: [
       {
@@ -122,6 +122,70 @@ const subjects = [
               {
                 text: 'There are 8 birds on a tree. 6 more birds join them. How many birds are there now?',
                 answer: '14'
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    id: 'computer',
+    name: 'Computer Science',
+    icon: '💻',
+    color: '#9C27B0', // Purple shade
+    description: 'Learn about computers, coding, and digital technology',
+    chapters: [
+      {
+        id: 'basics',
+        title: 'Computer Basics',
+        description: 'Learn about the different parts of a computer and how they work',
+        videoUrl: '/videos/computer/basics-intro.mp4',
+        content: 'Computers are electronic devices that can process data. They have different parts like the monitor, keyboard, mouse, and CPU (Central Processing Unit). The CPU is like the brain of the computer. It helps the computer to think and do tasks. The monitor is like the face of the computer, showing us what the computer is doing. The keyboard and mouse help us to give instructions to the computer.',
+        exercises: [
+          {
+            id: 'computer-parts',
+            type: 'matching',
+            title: 'Match Computer Parts',
+            instructions: 'Match each computer part with its function',
+            data: [
+              { item: 'CPU', match: 'Processes information' },
+              { item: 'Monitor', match: 'Displays images' },
+              { item: 'Keyboard', match: 'Types letters and numbers' },
+              { item: 'Mouse', match: 'Moves the cursor' },
+              { item: 'Speakers', match: 'Plays sounds' }
+            ]
+          },
+          {
+            id: 'computer-spellings',
+            type: 'spelling',
+            title: 'Computer Term Spelling Practice',
+            instructions: 'Listen and type the correct spelling',
+            words: ['computer', 'keyboard', 'mouse', 'monitor', 'screen', 'click', 'program']
+          },
+          {
+            id: 'computer-quiz',
+            type: 'quiz',
+            title: 'Computer Basics Quiz',
+            instructions: 'Choose the correct answer for each question',
+            questions: [
+              {
+                question: 'Which part of the computer is like its brain?',
+                options: ['Monitor', 'Keyboard', 'CPU', 'Mouse'],
+                correctAnswer: 'CPU',
+                explanation: 'The CPU (Central Processing Unit) processes information and controls the computer, just like a brain!'
+              },
+              {
+                question: 'What do we use to type letters and numbers?',
+                options: ['Monitor', 'Keyboard', 'Mouse', 'Speaker'],
+                correctAnswer: 'Keyboard',
+                explanation: 'The keyboard has keys with letters, numbers, and symbols that we press to type.'
+              },
+              {
+                question: 'What should you do before turning off your computer?',
+                options: ['Save your work', 'Turn up the volume', 'Press all the keys', 'Unplug everything'],
+                correctAnswer: 'Save your work',
+                explanation: 'Always save your work before turning off your computer or you might lose it!'
               }
             ]
           }

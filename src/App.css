@@ -1,15 +1,15 @@
 :root {
-  --primary-color: #4C86A8;
-  --secondary-color: #FF8E53;
-  --accent-color: #9CE37D;
-  --background-color: #F5F7FA;
-  --text-color: #333;
-  --success-color: #28a745;
-  --danger-color: #dc3545;
-  --warning-color: #ffc107;
-  --info-color: #17a2b8;
-  --border-radius: 12px;
-  --box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  --primary-color: #6A1B9A; /* Deep purple */
+  --secondary-color: #FF6D00; /* Vibrant orange */
+  --accent-color: #8E24AA; /* Medium purple */
+  --background-color: #F5EEFF; /* Light purple tint */
+  --text-color: #3E2723; /* Dark brown for better readability */
+  --success-color: #00C853; /* Bright green for success */
+  --danger-color: #FF1744; /* Bright red for errors */
+  --warning-color: #FFD600; /* Bright yellow for warnings */
+  --info-color: #00B0FF; /* Bright blue for info */
+  --border-radius: 16px; /* Rounder corners for fun elements */
+  --box-shadow: 0 6px 12px rgba(106, 27, 154, 0.15); /* Purple-tinted shadow */
 }
 
 * {
@@ -23,6 +23,11 @@ body {
   background-color: var(--background-color);
   color: var(--text-color);
   min-height: 100vh;
+  background-image: linear-gradient(
+    to bottom right,
+    rgba(145, 107, 191, 0.08), 
+    rgba(255, 152, 0, 0.05)
+  );
 }
 
 .app {
@@ -47,12 +52,19 @@ button {
   border-radius: var(--border-radius);
   padding: 0.75rem 1.5rem;
   font-size: 1rem;
-  transition: transform 0.2s, background-color 0.2s;
+  transition: transform 0.2s, background-color 0.2s, box-shadow 0.2s;
+  box-shadow: 0 4px 0 rgba(0, 0, 0, 0.2);
 }
 
 button:hover {
-  background-color: #3a6a85;
+  background-color: #7B1FA2; /* Lighter purple on hover */
   transform: translateY(-2px);
+  box-shadow: 0 6px 0 rgba(0, 0, 0, 0.2);
+}
+
+button:active {
+  transform: translateY(2px);
+  box-shadow: 0 0 0 rgba(0, 0, 0, 0.2);
 }
 
 .card {
@@ -61,6 +73,12 @@ button:hover {
   box-shadow: var(--box-shadow);
   padding: 1.5rem;
   margin-bottom: 1.5rem;
+  border-top: 4px solid var(--secondary-color);
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
 }
 
 @media (max-width: 768px) {
@@ -78,4 +96,32 @@ button:hover {
 
 .reward-notification {
   animation: popIn 0.5s ease-out forwards;
+  background-color: #6A1B9A;
+  color: white;
+  border-left: 4px solid var(--secondary-color);
+}
+
+/* Add fun decorative elements */
+.content::before {
+  content: '';
+  position: fixed;
+  top: 50px;
+  left: 20px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: rgba(255, 109, 0, 0.1);
+  z-index: -1;
+}
+
+.content::after {
+  content: '';
+  position: fixed;
+  bottom: 50px;
+  right: 20px;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: rgba(106, 27, 154, 0.1);
+  z-index: -1;
 }

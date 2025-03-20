@@ -1,9 +1,10 @@
 .app-header {
   background-color: white;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 15px rgba(106, 27, 154, 0.2);
   position: sticky;
   top: 0;
   z-index: 1000;
+  border-bottom: 3px solid var(--secondary-color);
 }
 
 .header-container {
@@ -32,6 +33,12 @@
 .logo-icon {
   font-size: 1.8rem;
   margin-right: 0.5rem;
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
 }
 
 .navigation {
@@ -57,7 +64,7 @@
 }
 
 .nav-links li a:hover {
-  color: var(--primary-color);
+  color: var(--secondary-color);
 }
 
 .nav-icon {
@@ -73,20 +80,28 @@
 .points-display {
   display: flex;
   align-items: center;
-  background-color: #f8f9fa;
+  background: linear-gradient(to right, #6A1B9A, #8E24AA);
   padding: 0.5rem 1rem;
   border-radius: 2rem;
   margin-right: 1rem;
+  color: white;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
 }
 
 .points-icon {
   margin-right: 0.5rem;
   font-size: 1.2rem;
+  animation: spin 4s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }
 
 .points-count {
   font-weight: bold;
-  color: var(--secondary-color);
+  color: #FFD600;
 }
 
 .menu-toggle {
@@ -107,9 +122,15 @@
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
   padding: 1rem;
   border-radius: var(--border-radius);
-  border-left: 4px solid var(--accent-color);
+  border-left: 4px solid var(--secondary-color);
   z-index: 1100;
   max-width: 300px;
+  animation: slideIn 0.5s forwards;
+}
+
+@keyframes slideIn {
+  from { transform: translateX(100%); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
 }
 
 @media (max-width: 768px) {
